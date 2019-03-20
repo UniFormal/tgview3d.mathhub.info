@@ -28,7 +28,7 @@
       (function () {
         UnityLoader.SystemInfo.mobile = false;  // Workaround to force `UnityLoader` to actually load on mobile.
         MozillaResearch.telemetry.performance.mark('LoadingStart');
-        window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/Web.json', {
+        window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/WebVR.json', {
           Module: {
             // `preserveDrawingBuffer` is needed for WebVR content to be mirrored to the `<canvas>`.
             webglContextAttributes: {
