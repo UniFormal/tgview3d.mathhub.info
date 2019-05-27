@@ -21,6 +21,7 @@
       });
       MozillaResearch.telemetry.performance.mark('LoaderParsingStart');
     </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       /* global UnityLoader, MozillaResearch */
@@ -28,7 +29,7 @@
       (function () {
         UnityLoader.SystemInfo.mobile = false;  // Workaround to force `UnityLoader` to actually load on mobile.
         MozillaResearch.telemetry.performance.mark('LoadingStart');
-        window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/WebVR.json', {
+        window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/Web.json', {
           Module: {
             // `preserveDrawingBuffer` is needed for WebVR content to be mirrored to the `<canvas>`.
             webglContextAttributes: {
@@ -74,6 +75,12 @@
         </p>
       </div>
     </div>
+
+
+	<input type="file"
+       id="file" name="fileInput"
+       accept=".json">
+
 
     <button id="entervr" value="Enter VR"></button>
 
